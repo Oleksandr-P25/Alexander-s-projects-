@@ -2,6 +2,12 @@
 
 namespace Hello_world_project
 {
+    struct User {
+
+        public string name;
+        public int age;
+        
+    }
     class Program
     {
         static void Main(string[] args)
@@ -16,6 +22,11 @@ namespace Hello_world_project
             Console.WriteLine("The size of float is {0}.", sizeof(float));
             Console.WriteLine("The size of long is {0}.", sizeof(long));
             Console.WriteLine("The size of double is {0}.", sizeof(double));
+
+            User Tom;
+            Tom.age = 23;
+            
+            Console.WriteLine("The size of struct is {0}.", System.Runtime.InteropServices.Marshal.SizeOf(Tom.age));
             Console.ReadKey();
         }
     }
